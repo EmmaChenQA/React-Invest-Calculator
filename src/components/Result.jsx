@@ -15,8 +15,8 @@ function addTotalInterestData(calcData){
 
 function Result({inputData}) {
   const calcData=calculateInvestmentResults(inputData);
-  if (!calcData){
-    return (<p>請輸入正確數字</p>)
+  if (calcData.length ==0){
+    return (<p className='center'>Pls fill in valid duration!</p>)
   }
   console.log("calcData:",calcData)
   const resultData = addTotalInterestData(calcData);
